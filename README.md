@@ -18,8 +18,11 @@
 
 ## 仓库内容
 
-- `product-design-handoff-skill-2026-05-17.zip`：完整 skill 压缩包，可直接交给编码智能体解析。
-- 解压后得到 `product-design-handoff/`，这是可安装的 Codex skill 目录。
+- `product-design-handoff/`：完整、可安装的 Codex skill 目录。
+- `product-design-handoff/SKILL.md`：skill 触发说明和工作流。
+- `product-design-handoff/scripts/init_product_workspace.py`：项目文档包初始化脚本。
+- `product-design-handoff/assets/project-template/`：默认项目文档模板。
+- `product-design-handoff/references/`：产品发现、文档成熟度、开发就绪和架构评估参考材料。
 
 ## 安装方式
 
@@ -29,7 +32,7 @@
 ~/.codex/skills/product-design-handoff
 ```
 
-或者解压 zip 后，把其中的 `product-design-handoff` 文件夹复制到 Codex skills 目录。
+或者让编码智能体读取本仓库中的 `product-design-handoff/` 目录，并按 `SKILL.md` 学习和执行这个工作流。
 
 ## 使用方式
 
