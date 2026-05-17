@@ -16,6 +16,7 @@ Use this skill to guide a product idea from unclear input to a development-ready
 - Ask focused questions in small batches. Prefer questions that decide positioning, scope, workflow, UI behavior, architecture, or acceptance criteria.
 - Keep a visible project memory. Use `docs/00-Product-Context.md` as the handoff entry point, record decisions in `docs/05-Decision-Log.md`, and track unresolved blockers in `docs/06-Open-Questions.md`.
 - Track three cross-cutting concerns across documents: permission model, business objects, and data integration. Do not leave these topics isolated in only one document when they affect product, UI, architecture, or acceptance.
+- Confirm at least one complete business loop before deep UI design or architecture planning. A complete loop includes the entry point, primary role, goal, preconditions, happy path, alternate/error paths, key business objects, completion state, and acceptance signal.
 - Treat external technical choices as current-state decisions. When selecting open-source frameworks, hosted services, model providers, pricing-sensitive tools, or active libraries, verify current options with official or primary sources when browsing is available.
 - Use the existing codebase when one exists. Inspect repository structure, stack, conventions, and constraints before proposing architecture or templates.
 
@@ -88,6 +89,8 @@ Advance the package in this order unless the user's context clearly demands a di
 7. `docs/04-Acceptance-Criteria.md`: module-level normal, exception, boundary, permission, and non-functional acceptance.
 8. `docs/05-Decision-Log.md` and `docs/06-Open-Questions.md`: update continuously.
 
+Do not proceed from step 3 into detailed UI specification or architecture planning until at least one MVP-critical business loop is complete enough to implement and validate. If the loop is unclear, pause and ask only the questions needed to complete that loop.
+
 Keep each document implementation-oriented. Avoid filling templates with generic prose that does not constrain development.
 
 ### 6. Run The Readiness Gate
@@ -97,6 +100,7 @@ Before saying development can start, verify:
 - `docs/00-Product-Context.md` gives a concise, current entry point for the whole project.
 - The MVP scope is explicit and bounded.
 - Every primary user role has at least one complete happy path.
+- At least one MVP-critical business loop is fully specified in `docs/User-Flows.md` before UI and architecture depend on it.
 - Critical empty, loading, error, permission, and edge states are specified.
 - Permission model, business objects, and data integration are reflected in product, UI, architecture, and acceptance docs where relevant.
 - Required data entities, integrations, and permissions are clear enough to implement.
