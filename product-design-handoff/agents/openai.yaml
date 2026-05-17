@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Design Handoff"
+  short_description: "Turn product ideas into Codex-ready docs"
+  default_prompt: "Use $product-design-handoff to turn this product idea into a development-ready document package."
