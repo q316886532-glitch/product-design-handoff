@@ -20,6 +20,8 @@ Use this checklist to judge whether the docs are useful for implementation, not 
 
 ## User Flows
 
+- At least one MVP-critical business loop is complete before UI or architecture details depend on it.
+- A complete business loop includes entry point, primary role, goal, preconditions, happy path, alternate/error paths, key business objects, completion state, and acceptance signal.
 - Each critical flow has preconditions, happy path, alternate paths, and completion state.
 - Failure modes are represented where they affect product behavior.
 - State transitions are clear for important entities.
